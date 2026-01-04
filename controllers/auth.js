@@ -7,7 +7,6 @@ const jwt = require('jsonwebtoken');
 const register = async (req, res) => {
   const user = await User.create({ ...req.body });
   const token = user.createJWT();
-  console.log('register controller');
   res
     .status(StatusCodes.CREATED)
     .json({ user: { name: user.name, email: user.email }, token });

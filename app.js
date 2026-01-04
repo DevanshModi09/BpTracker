@@ -15,13 +15,11 @@ const notFoundMiddleware = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
 
 app.use(express.json());
-
+app.use(express.static('./public'));
 //routes
 app.use('/api/v1/auth', authRouter);
 //Now you can add more routes that require authentication like this:
-app.get('/', authenticateUser, (req, res) => {
-  res.send('All your secured routes here');
-});
+
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);

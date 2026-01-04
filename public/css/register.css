@@ -1,0 +1,115 @@
+/* --------------------
+   Base
+-------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f172a;
+}
+
+/* --------------------
+   Layout
+-------------------- */
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* --------------------
+   Form
+-------------------- */
+.form {
+  width: 100%;
+  max-width: 320px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.form h5 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+}
+
+/* --------------------
+   Fields
+-------------------- */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #374151;
+  text-transform: capitalize;
+}
+
+.form-input {
+  padding: 0.45rem 0.55rem;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* --------------------
+   Alert
+-------------------- */
+.form-alert {
+  font-size: 0.75rem;
+  margin-bottom: 0.6rem;
+  color: #dc2626;
+  text-align: center;
+  display: none;
+}
+
+/* --------------------
+   Button
+-------------------- */
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 0.45rem;
+  background: #2563eb;
+  color: white;
+}
+
+/* --------------------
+   Mobile polish
+-------------------- */
+@media (max-width: 360px) {
+  .form {
+    padding: 1.2rem;
+  }
+}

@@ -8,7 +8,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   alertBox.style.display = 'none';
 
-  const name = usernameInput.value.trim(); // 👈 map username → name
+  const name = usernameInput.value.trim();
   const email = emailInput.value.trim();
   const password = passwordInput.value.trim();
 
@@ -32,7 +32,8 @@ form.addEventListener('submit', async (e) => {
     window.location.href = '/index.html';
   } catch (err) {
     let msg =
-      err.response.data.err.errorResponse.errmsg ||
+      err.response.data?.err?.errorResponse?.errmsg ||
+      err.response.data?.err?.message ||
       'Something went wrong , Contact Admin';
     if (msg.includes('duplicate key error')) {
       msg = 'Email already exists';

@@ -3,10 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
-body {
-  cursor: url('/cursor.cur') 12 12, default;
-}
 
 body {
   font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont,
@@ -67,14 +63,14 @@ body {
   color: #fff;
 }
 .hero {
-  max-width: 1000px;
+  max-width: 12000px;
   margin: 6rem auto 4rem;
   padding: 0 2rem;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 3.1rem;
+  font-size: 3.6rem;
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.5px;
@@ -128,7 +124,7 @@ body {
   color: #b4b4b4;
 }
 #highlight-text {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   color: #000;
 }

@@ -1,7 +1,7 @@
 {
-  "name": "06-jobs-api",
+  "name": "logyourhealth",
   "version": "1.0.0",
-  "description": "",
+  "description": "Health tracking application for logging and monitoring blood pressure readings",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"

@@ -31,7 +31,7 @@ form.addEventListener('submit', async (e) => {
 
     window.location.href = '/index.html';
   } catch (err) {
-    let msg = err.response.data.msg || 'Something went wrong , Contact Admin';
+    let msg = err?.response?.data?.msg || 'Something went wrong , Contact Admin';
     showError(msg);
   }
 });

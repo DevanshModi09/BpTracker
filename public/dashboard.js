@@ -76,7 +76,7 @@ async function loadReadings() {
     }
 
     const data = await response.json();
-    const readings = data.readings || [];
+    const readings = data.readings.reverse() || [];
 
     displayReadings(readings);
     updateStatistics(readings);

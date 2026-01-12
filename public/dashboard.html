@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BP Tracker - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>BP Tracker</h1>
+                <div class="header-actions">
+                    <span id="userName" class="user-name"></span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="add-reading-section">
+                <h2>Add New Reading</h2>
+                <form id="addReadingForm" class="reading-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="systolic">Systolic (mmHg)</label>
+                            <input type="number" id="systolic" name="systolic" required min="50" max="300">
+                        </div>
+                        <div class="form-group">
+                            <label for="diastolic">Diastolic (mmHg)</label>
+                            <input type="number" id="diastolic" name="diastolic" required min="30" max="200">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Add Reading</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="readingMessage" class="message"></div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Total Readings</h3>
+                    <p class="stat-value" id="totalReadings">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Systolic</h3>
+                    <p class="stat-value" id="avgSystolic">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Diastolic</h3>
+                    <p class="stat-value" id="avgDiastolic">-</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Latest Reading</h3>
+                    <p class="stat-value" id="latestReading">-</p>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <h2>Blood Pressure Trend</h2>
+                <canvas id="bpChart"></canvas>
+            </section>
+
+            <section class="readings-section">
+                <h2>All Readings</h2>
+                <div id="readingsList" class="readings-list">
+                    <p class="loading">Loading readings...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
